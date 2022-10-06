@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-// get file md5
+// FileMd5 获取文件的MD5值
 func FileMd5(filename string) (string, error) {
 	file, err := os.Open(filename)
 	if err != nil {
@@ -23,7 +23,7 @@ func FileMd5(filename string) (string, error) {
 	return hex.EncodeToString(h.Sum(nil)), nil
 }
 
-// get string md5
+// StringMd5 获取字符串的MD5
 func StringMd5(s string) string {
 	md5 := md5.New()
 	md5.Write([]byte(s))
