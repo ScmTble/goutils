@@ -1,3 +1,4 @@
+// hash
 package hash
 
 import (
